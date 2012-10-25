@@ -1,0 +1,24 @@
+<html>
+	<!--This html page is to add and remove users.
+	To create a new account a username and password is required.
+	To delete an account only the username is requried.
+	These privileges are only available to the admin-->
+    <head>
+        <title>Accounts</title>
+    </head>
+    <body>
+        <h1>Add/Remove Accounts</h1>
+        <br/>
+        <form method="post" action="add_user.jsp">
+            New Account<br/>
+            Username: <input type="text" name="add"/><br/>
+            Password: <input type="text" name="newpass"/><br/>
+            <input type="submit" value="Add"/><br/>
+        </form>
+        <form method="post" action="rem_user.jsp">
+            Delete Account<br/>
+            Username: <input type="text" name="rem"/><br/>
+            <input type="submit" value="Remove"/><br/>
+        </form>
+    </body>
+</html>

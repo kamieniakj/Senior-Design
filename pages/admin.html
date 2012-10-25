@@ -1,0 +1,17 @@
+<html>
+    <head>
+    <!--This HTML page is the admin page where the administrator can add/remove accounts and view user SSN
+    This page requires admin privileges and when the admin clicks on the forms for add/remove accounts or
+    view user SSN, he/she is transported to the corresponding page-->
+        <title>Admin Console</title>
+    </head>
+    <body>
+        <h1>Admin Console</h1>
+        <br/>
+        <a href="accounts.html">Add/Remove Accounts</a>
+        <form method="post" action="view.jsp">
+            View User SSN: <input type="text" name="account"/>
+            <input type="submit"/>
+        </form>
+    </body>
+</html>
