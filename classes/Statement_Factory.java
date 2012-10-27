@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class db_cap{
+public class Statement_Factory {
 
     public Statement get_statement()
     throws SQLException, InstantiationException, ClassNotFoundException, IllegalAccessException
