@@ -10,15 +10,8 @@
         Username <% out.println(bean.getRem()); %><br/>
         
         <%
-		String connectionURL = "jdbc:mysql://localhost:3306/test"; 
-
-		Connection connection = null; 
-
-		Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-
-		connection = DriverManager.getConnection(connectionURL, "root", "");
-
-		Statement st = connection.createStatement();
+        Statement_Factory factroy = new Statement_Factory();
+		Statement st = factory.get_statement();
 		st.executeUpdate("DELETE FROM clients WHERE username = '"+bean.getRem()+"';");
 			
 		%>

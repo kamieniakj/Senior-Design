@@ -10,15 +10,8 @@
         
         
         <%
-		String connectionURL = "jdbc:mysql://localhost:3306/test"; 
-
-		Connection connection = null; 
-
-		Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-
-		connection = DriverManager.getConnection(connectionURL, "root", "");
-
-		Statement st = connection.createStatement();
+        Statement_Factory factory = new Statement_Factory();
+		Statement st = factory.get_statement();
 		ResultSet rs = st.executeQuery("SELECT admin FROM clients WHERE username = '" +bean.getUsername()+"';");
 		rs.next();	
 			

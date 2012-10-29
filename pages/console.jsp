@@ -9,15 +9,8 @@
     <body>
    		
 	    <%
-		String connectionURL = "jdbc:mysql://localhost:3306/test"; 
-
-		Connection connection = null; 
-
-		Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-
-		connection = DriverManager.getConnection(connectionURL, "root", "");
-
-		Statement st = connection.createStatement();
+        Statement_Factory factory = new Statement_Factory();
+		Statement st = factroy.get_statement();
 		ResultSet rs = st.executeQuery("SELECT username, password, admin FROM clients;");
 		
 		
