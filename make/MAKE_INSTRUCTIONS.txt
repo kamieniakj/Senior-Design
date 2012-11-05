@@ -1,0 +1,15 @@
+Creating the Database
+---------------------------------------------------------------------
+install mysql
+create a database names test using:
+> CREATE DATABASE test;
+switch to using that database using:
+> use test;
+Run the database_setup.sql file by using:
+> source database_setup.sql;
+
+Building the .war
+----------------------------------------------------------------------
+
+
+
