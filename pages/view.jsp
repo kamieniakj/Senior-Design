@@ -27,7 +27,7 @@
 			if(admin == 1){
 				rs = st.executeQuery("SELECT ssn FROM clients WHERE username = '" +bean.getAccount()+"';");
 				rs.next();
-				int ssn = rs.getInt("ssn");
+				String ssn = rs.getString("ssn");
 				out.println("User: " + bean.getAccount()+ "      ");
 				out.println("SSN: " + ssn);
 			}
